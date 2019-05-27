@@ -3,7 +3,7 @@ package Algo003;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MethodSeries304 {
+public class Method304 {
     public int lengthOfLongestSubstring(String s) {
         int n = s.length(), ans = 0;
         Map<Character, Integer> map = new HashMap<>(); // current index of character

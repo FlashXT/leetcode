@@ -1,11 +1,12 @@
-package Algo005;
+package Problems.P005_LongestPalindromicSubstring;
 
-public class Baseline {
+public class Method1 {
 
+    //时间复杂度O(n^3)
     public static String longestPalindrome(String s) {
         String str = "";
         for(int i = 0; i<s.length();i++){
-            for(int j=i+1; j <= s.length() ;j++){
+            for(int j=s.length(); j >=i+1 ;j--){
 
                 if(isPalindrome(s.substring(i,j)) > str.length() )
                     str = s.substring(i,j);

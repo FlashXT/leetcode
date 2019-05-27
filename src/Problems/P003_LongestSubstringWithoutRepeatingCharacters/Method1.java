@@ -1,8 +1,8 @@
-package Algo003;
+package Problems.P003_LongestSubstringWithoutRepeatingCharacters;
 
-public class MethodSeries101 {
+public class Method1 {
 
-    public int lengthOfLongestSubstring(String s) {
+    public static int lengthOfLongestSubstring(String s) {
 
         int maxlen = 0;
         String ch;
@@ -17,7 +17,7 @@ public class MethodSeries101 {
 
     }
 
-    public String SubString(String s,int head,int tail){
+    public static String SubString(String s,int head,int tail){
         String sub = "";
         int i = 0;
         while(i <= tail-head){
@@ -26,7 +26,7 @@ public class MethodSeries101 {
         }
         return sub;
     }
-    public boolean NoRepeatingChars(String s){
+    public static boolean NoRepeatingChars(String s){
 
         int len = s.length();
         char [] ch = s.toCharArray();

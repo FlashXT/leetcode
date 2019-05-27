@@ -1,9 +1,9 @@
-package Algo003;
+package Problems.P003_LongestSubstringWithoutRepeatingCharacters;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class MethodSeries201 {
+public class Method2 {
     public int lengthOfLongestSubstring(String s) {
         int n = s.length();
         int ans = 0;

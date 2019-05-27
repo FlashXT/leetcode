@@ -1,6 +1,6 @@
 package Algo003;
 
-public class MethodSeries305 {
+public class Method305 {
     public int lengthOfLongestSubstring(String s) {
         int n = s.length(), ans = 0;
         int[] index = new int[128]; // current index of character
