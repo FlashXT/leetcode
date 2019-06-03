@@ -8,9 +8,9 @@ package Problems.P004_MedianofTwoSortedArrays;
  *****************************************************************/
 public class Main {
     public static void main(String [] args){
-        int [] num1 = {};
-        int [] num2 = {};
-        double res = new Method1().findMedianSortedArrays(int[] nums1, int[] nums2) ;
+        int [] nums1 = {1,3,4,5,7,9,10};
+        int [] nums2 = {2,3,7};
+        double res = new Method1().findMedianSortedArrays(nums1,nums2) ;
         System.out.println(res);
     }
 }
