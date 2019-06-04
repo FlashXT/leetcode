@@ -6,6 +6,8 @@ package Problems.P004_MedianofTwoSortedArrays;
  * @Version 1.0
  * CopyRight © 2018-2020,FlashXT & turboMan . All Right Reserved.
  *****************************************************************/
+//从中位数的定义出发，推出中位数满足的条件，然后寻找使该条件成立的位置；
+//https://leetcode.wang/leetCode-4-Median-of-Two-Sorted-Arrays.html
 public class Method1 {
     public double findMedianSortedArrays(int[] A, int[] B) {
         int m = A.length;
