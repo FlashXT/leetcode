@@ -8,15 +8,19 @@ import DataStructure.ListNode;
  * @Version 1.0
  * CopyRight © 2018-2020,FlashXT & turboMan . All Right Reserved.
  *****************************************************************/
-//两两合并，直到合并K个List
-public class Method1 {
+//两两合并优化，使用归并排序的思想(循环版)https://leetcode.com/problems/merge-k-sorted-lists/
+public class Method5 {
     public ListNode mergeKLists(ListNode[] lists){
         if(lists==null) return null;
         if(lists.length == 0) return null;
-        for(int i = 0; i < lists.length-1;i++){
-            lists[i+1]=mergeTwoLists(lists[i],lists[i+1]);
+        int interval = 1;
+        while(interval < lists.length){
+            for(int i = 0; i + interval < lists.length;i=i+interval*2){
+                lists[i] = mergeTwoLists(lists[i],lists[i+interval]);
+            }
+            interval*=2;
         }
-        return lists[lists.length-1];
+        return lists[0];
     }
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {

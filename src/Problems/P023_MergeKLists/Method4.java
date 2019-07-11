@@ -8,17 +8,23 @@ import DataStructure.ListNode;
  * @Version 1.0
  * CopyRight © 2018-2020,FlashXT & turboMan . All Right Reserved.
  *****************************************************************/
-//两两合并，直到合并K个List
-public class Method1 {
+//两两合并优化，使用归并排序的思想(递归版)
+public class Method4 {
     public ListNode mergeKLists(ListNode[] lists){
         if(lists==null) return null;
         if(lists.length == 0) return null;
-        for(int i = 0; i < lists.length-1;i++){
-            lists[i+1]=mergeTwoLists(lists[i],lists[i+1]);
-        }
-        return lists[lists.length-1];
+        ListNode res = mergeKLists(lists,0,lists.length-1);
+        return res;
     }
+    public ListNode mergeKLists(ListNode[] lists,int start,int end){
+        if(start == end)  return lists[start];
+        int mid = start + (end-start)/2;
+        ListNode list1 = mergeKLists(lists,start,mid);
+        ListNode list2 = mergeKLists(lists,mid+1,end);
+        ListNode res = mergeTwoLists(list1,list2);
+        return res;
 
+    }
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if(l1 == null && l2 == null) return null;
         if(l1 == null) return l2;
