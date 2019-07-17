@@ -5,9 +5,9 @@ public class Method1 {
     //时间复杂度O(n^3)
     public static String longestPalindrome(String s) {
         String str = "";
-        for(int i = 0; i<s.length();i++){
-            for(int j=s.length(); j >=i+1 ;j--){
-
+        for(int l = 1; l<=s.length();l++){
+            for(int i = 0; i+l-1 <s.length() ;i++){
+                int j = i+l;
                 if(isPalindrome(s.substring(i,j)) > str.length() )
                     str = s.substring(i,j);
             }
