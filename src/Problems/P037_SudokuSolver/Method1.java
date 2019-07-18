@@ -27,7 +27,6 @@ public class Method1 {
                         board[i][j]=nums[k];
                         if(isValidSudoku(board,i,j)&&solveSudokuk(board)){
                             return true;
-
                         }
                         board[i][j]='.';
                     }
