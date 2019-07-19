@@ -9,6 +9,6 @@ package Problems.P042_TrappingRainWater;
 public class Main {
     public static void main(String [] args){
         int [] hegigth = {4,2,3};
-        System.out.println(new Method5().trap(hegigth));
+        System.out.println(new Method6().trap(hegigth));
     }
 }
