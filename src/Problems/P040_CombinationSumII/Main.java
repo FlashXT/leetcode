@@ -1,4 +1,4 @@
-package Problems.P40_CombinationSumII;
+package Problems.P040_CombinationSumII;
 
 /*****************************************************************
  * @Author:FlashXT;

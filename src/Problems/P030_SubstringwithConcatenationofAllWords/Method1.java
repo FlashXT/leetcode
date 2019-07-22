@@ -1,6 +1,4 @@
-package Problems.P30_SubstringwithConcatenationofAllWords;
-
-import org.omg.PortableInterceptor.INACTIVE;
+package Problems.P030_SubstringwithConcatenationofAllWords;
 
 import java.util.ArrayList;
 import java.util.HashMap;

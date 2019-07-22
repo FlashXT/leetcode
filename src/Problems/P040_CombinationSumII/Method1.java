@@ -1,4 +1,4 @@
-package Problems.P40_CombinationSumII;
+package Problems.P040_CombinationSumII;
 
 import java.util.ArrayList;
 import java.util.Arrays;

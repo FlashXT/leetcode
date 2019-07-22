@@ -1,4 +1,4 @@
-package Problems.P30_SubstringwithConcatenationofAllWords;
+package Problems.P030_SubstringwithConcatenationofAllWords;
 
 import java.util.ArrayList;
 import java.util.HashMap;
