@@ -32,7 +32,7 @@ public class Method2 {
             else{
                 temp = res.get(res.size()-1);
                 temp.set(1,Math.max(temp.get(1),intervals[i][1]));
-                res.set(res.size()-1,temp);
+//                res.set(res.size()-1,temp);
             }
         }
         int [] [] ans = new int [res.size()][2];
