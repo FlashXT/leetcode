@@ -47,7 +47,7 @@ public class Method3 {
             for( Interval node2 :graph.keySet()){
                 if(node1!=node2 && isoverlap(node1,node2)){
                     graph.get(node1).add(node2);
-//                    graph.get(node2).add(node1);
+
                 }
             }
         }
