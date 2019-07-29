@@ -1,25 +1,36 @@
 package Problems.P060_PermutationSequence;
-
+//LeetCode_Day004,2019.6.3,Monday;FlashXT!
 public class Method1 {
+    int count = -1;
+    private String result = "";
     public String getPermutation(int n, int k) {
-        String res = getPermutation("",0,n,k);
-        System.out.println(res);
-        return res;
+        int [] visited = new int [n+1];
+        for(int i = 1; i <visited.length;i++)
+            visited[i] = 1;
+        count = k;
+        getPermutation("",visited,0,n);
+        System.out.println(result);
+        return result;
     }
-    private String getPermutation(String res,int index,int n, int k) {
+    private void getPermutation(String res,int[] visited,int index,int n) {
         if(index == n){
-            System.out.println(res);
-            k--;
-            if(k == 0)
-                return res;
-            else
-                return null;
+//            System.out.println(res);
+            count--;
+            if(count == 0){
+                result = res;
+            }
+                return ;
         }
-        for(int i =index;i<n;i++){
-            res+=i+1;
-            getPermutation(res,index+1,n,k);
-            res = res.substring(0,res.length()-1);
+        for(int i =1;i<=n;i++){
+            if(visited[i]!= 0){
+                res+=i;
+                visited[i] --;
+                getPermutation(res,visited,index+1,n);
+                res = res.substring(0,res.length()-1);
+                visited[i] ++;
+            }
+
         }
-        return res;
+        return ;
     }
 }
