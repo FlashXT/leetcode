@@ -1,6 +1,6 @@
 package Problems.P060_PermutationSequence;
 //LeetCode_Day004,2019.6.3,Monday;FlashXT!
-public class Method1 {
+public class Method2 {
     int count = -1;
     private String result = "";
     public String getPermutation(int n, int k) {
@@ -12,25 +12,28 @@ public class Method1 {
         System.out.println(result);
         return result;
     }
-    private void getPermutation(String res,int[] visited,int index,int n) {
+    private boolean getPermutation(String res,int[] visited,int index,int n) {
         if(index == n){
             System.out.println(res);
             count--;
             if(count == 0){
                 result = res;
-
+                return true;
             }
-            return ;
+            return false;
         }
         for(int i =1;i<=n;i++){
             if(visited[i]!= 0){
                 res+=i;
                 visited[i] --;
-                getPermutation(res,visited,index+1,n);
+                if(!getPermutation(res,visited,index+1,n)){
                     res = res.substring(0,res.length()-1);
                     visited[i] ++;
+                }
+
             }
 
         }
+        return false;
     }
 }
