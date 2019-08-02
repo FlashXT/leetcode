@@ -6,7 +6,7 @@ public class Method2 {
         return edit_Distance(word1,word2,word1.length()-1,word2.length()-1);
     }
     private static int edit_Distance(String word1,String word2,int w1index,int w2index){
-
+       //Method1中使用使用word.length()表示长度,该方法w1index表示索引,所以return的条件不一样
         if (w1index < 0 && w2index <0){
             return 0;
         }
