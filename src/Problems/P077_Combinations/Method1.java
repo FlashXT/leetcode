@@ -23,7 +23,9 @@ public class Method1 {
         }
         for(int i = index+1 ; i <= n;i++){
             list.add(i);
+            //递归
             combineR(n,k,i,list);
+            //回溯
             list.remove(list.size()-1);
         }
     }
