@@ -4,6 +4,7 @@ import DataStructure.ListNode;
 
 public class Method2 {
     public ListNode deleteDuplicates(ListNode head) {
+        //处理链表问题先添加头结点
         ListNode dummy= new ListNode(-1);
         dummy.next = head;
         ListNode ptr = dummy;
