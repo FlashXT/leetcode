@@ -16,15 +16,12 @@ public class Method1 {
         dummy.next = head;
         ListNode ptr = dummy,cur = head,tail=dummy,ptr2 = tail;
         while(tail.next!=null){
-            if(tail.val == x)
-                cur = tail;
             tail = tail.next;
-
         }
         ptr2 = tail;
 
-        while(cur!=tail){
-            if(cur.val > x){
+        while(cur!=null && cur!=tail){
+            if(cur.val >= x){
                 ptr.next = cur.next;
                 ptr2.next =cur;
                 cur.next=null;
@@ -32,12 +29,12 @@ public class Method1 {
                 ptr2 = ptr2.next;
             }
             else
-                ptr = ptr.next;
+                ptr = cur;
 
             cur = cur.next;
 
         }
-        if(cur.val > x){
+        if(cur!=null &&cur.next!=null && cur.val >= x){
             ptr.next = cur.next;
             ptr2.next = cur;
             cur.next = null;
