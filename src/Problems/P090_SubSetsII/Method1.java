@@ -1,4 +1,4 @@
-package Problems.P090_SubSets2;
+package Problems.P090_SubSetsII;
 
 import java.util.ArrayList;
 import java.util.List;
