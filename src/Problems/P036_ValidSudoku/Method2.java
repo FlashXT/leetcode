@@ -9,7 +9,7 @@ import java.util.Set;
  * @Version 1.0
  * CopyRight © 2018-2020,FlashXT & turboMan . All Right Reserved.
  *****************************************************************/
-//解题思路很新颖：我们就可以把第一行的放在一起，第二行的放在一起……第一列的放在一起，
+//解题思路很新颖：我们可以把第一行的放在一起，第二行的放在一起……第一列的放在一起，
 //第二列的放在一起……第一个小棋盘的放在一起，第二个小棋盘的放在一起……
 //我们用 HashSet 实现放在一起的作用，但是这样的话总共就是 9 行，9 列，9 个小棋盘，
 //27 个 HashSet 了。我们其实可以在放的时候标志一下，例如：
@@ -24,7 +24,7 @@ public class Method2 {
             for(int j = 0; j < board[i].length;j++){
                 char number = board[i][j];
                 if(number !='.'){
-                    if(!set.add(number+"_row+"+i)||
+                    if(!set.add(number+"_row_"+i)||
                             !set.add(number+"_col_"+j)||
                               !set.add(number+"_block_"+"("+i/3+","+j/3+")"))
                         return false;
