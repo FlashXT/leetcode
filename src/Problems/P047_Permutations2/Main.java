@@ -11,6 +11,6 @@ import Problems.P010_RegularExpressionMatching.Mehtod1;
 public class Main {
     public static void main(String [] args){
         int [] nums = {1,1,2};
-        new Method3().permuteUnique(nums);
+        new Method0().permuteUnique(nums);
     }
 }

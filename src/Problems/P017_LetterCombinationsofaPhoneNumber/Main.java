@@ -20,7 +20,7 @@ Example:
  */
 public class Main {
     public static void main(String [] args){
-//        System.out.println(new Method1().letterCombinations("27"));
+//        System.out.println(new Method3().letterCombinations("27"));
         System.out.println(new Method2().letterCombinations("27"));
 
     }

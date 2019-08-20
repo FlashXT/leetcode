@@ -9,6 +9,7 @@ package Problems.P046_Permutations;
 public class Main {
     public static void main(String [] args){
         int [] nums = {1,1,2};
-        new Method1().permute(nums);
+        new Method0().permute(nums);
+        System.out.println();
     }
 }
