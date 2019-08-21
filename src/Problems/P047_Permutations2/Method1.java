@@ -26,7 +26,6 @@ public class Method1 {
      permute(digits,count,new int[nums.length],0,res);
      return res;
 
-
     }
     public void permute(int [] digit,int [] count,int []temp,int level,List<List<Integer>> res){
         if(level == temp.length){
@@ -36,7 +35,8 @@ public class Method1 {
             res.add(list);
             return ;
         }
-
+        //该方法能够去除重复的排列是因为digit数组长度与nums数组中出现的字符个数相等，
+        // 与字符出现的次数无关；count数组也是这样；
         for(int i = 0; i < count.length;i++){
             if(count[i]!=0){
                 temp[level] =digit[i];

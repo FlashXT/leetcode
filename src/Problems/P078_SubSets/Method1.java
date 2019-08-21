@@ -11,27 +11,20 @@ import java.util.List;
  *****************************************************************/
 //递归回溯法
 public class Method1 {
-    private List<List<Integer>> res = new ArrayList<List<Integer>>();
-    public List<List<Integer>> subsets(int[] nums) {
-        for(int i = 0; i <= nums.length;i++){
-            Combinations(nums,0,i,new ArrayList<>());
+    public List<List<Integer>> subsets(int [] nums){
+        List<List<Integer>> res = new ArrayList<>();
+        Combinations(nums,0,new ArrayList<>(),res);
+        for(int i = 0;  i < res.size();i++){
+            System.out.println(res.get(i));
         }
-        for(int i = 0; i< res.size();i++){
-            for(int j = 0;j < res.get(i).size();j++){
-                System.out.print(res.get(i).get(j)+"\t");
-            }
-            System.out.println();
-        }
+
         return res;
     }
-    private void Combinations(int [] nums , int index,int k,List<Integer> temp){
-        if(temp.size() == k){
-             res.add(new ArrayList<>(temp));
-             return;
-        }
-        for(int i=index;i < nums.length- (k - temp.size())+1;i++){
+    private void Combinations(int [] nums , int index,List<Integer> temp,List<List<Integer>> res){
+        res.add(new ArrayList<>(temp));
+        for(int i=index;i < nums.length;i++){
             temp.add(nums[i]);
-            Combinations(nums,i+1,k,temp);
+            Combinations(nums,i+1,temp,res);
             temp.remove(temp.size()-1);
         }
     }

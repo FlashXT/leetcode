@@ -9,6 +9,6 @@ package Problems.P078_SubSets;
 public class Main {
     public static void main(String [] args){
         int [] nums = {1,2,3};
-        new Method3().subsets(nums);
+        new Method1().subsets(nums);
     }
 }
