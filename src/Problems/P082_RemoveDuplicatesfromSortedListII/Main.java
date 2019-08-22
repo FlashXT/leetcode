@@ -1,4 +1,4 @@
-package Problems.P082_RemoveDuplicatesfromSortedList_II;
+package Problems.P082_RemoveDuplicatesfromSortedListII;
 
 import DataStructure.ListNode;
 
