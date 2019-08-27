@@ -10,7 +10,7 @@ import DataStructure.TreeNode;
  *****************************************************************/
 public class Main {
     public static void main(String [] args){
-        int [] nums = {2,3,1};
+        int [] nums = {1,3,-1,-1,2};
         TreeNode root = BulidTree(nums,0);
         new Method1().recoverTree(root);
         System.out.println(root.val);
