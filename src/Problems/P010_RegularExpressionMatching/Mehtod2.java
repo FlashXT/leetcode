@@ -6,7 +6,7 @@ package Problems.P010_RegularExpressionMatching;
  * @Version 1.0
  * CopyRight © 2018-2020,FlashXT & turboMan . All Right Reserved.
  *****************************************************************/
-//动态规划：自顶向下记忆化搜索
+//自顶向下记忆化搜索
 public class Mehtod2 {
     enum Result {  TRUE, FALSE    };
     Result[][] memo;

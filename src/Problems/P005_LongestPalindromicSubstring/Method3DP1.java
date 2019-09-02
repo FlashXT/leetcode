@@ -7,7 +7,7 @@ package Problems.P005_LongestPalindromicSubstring;
  * CopyRight © 2018-2020,FlashXT & turboMan . All Right Reserved.
  *****************************************************************/
 //算法思想：遍历给定字符串s的长度为l的子串（l=1...s.length），确定子串是否为回文串,
-// 整体思路与暴露算法一致，但是在判定子字符串是否为回文串时，采用动态规划方法将时间复杂
+// 整体思路与暴力算法一致，但是在判定子字符串是否为回文串时，采用动态规划方法将时间复杂
 // 度降为O(n^2)；
 public class Method3DP1 {
     public String longestPalindrome(String s) {

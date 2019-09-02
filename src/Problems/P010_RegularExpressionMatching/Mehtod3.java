@@ -12,7 +12,7 @@ public class Mehtod3 {
     public boolean isMatch(String str, String pattern) {
         boolean [][]memo = new boolean[str.length() + 1][pattern.length() + 1];
         memo[str.length()][pattern.length()]=true;
-        for(int i = str.length(); i >=0 ;i--){
+        for(int i = str.length()-1; i >=0 ;i--){
             for(int j = pattern.length()-1 ; j >= 0;j--){
                 boolean first_match = ( i < str.length()&&
                         (str.charAt(i)==pattern.charAt(j)|| pattern.charAt(j)=='.'));

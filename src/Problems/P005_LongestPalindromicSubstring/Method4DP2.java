@@ -11,6 +11,7 @@ public class Method4DP2 {
         if(s.length() == 0) return s;
         int max = 0;
         String res="";
+        //memo[i][j] 表示 s[i ~j+1]是否为回文串
         boolean [] [] memo = new boolean[s.length()][s.length()];
 
         //长度为l的子串是否为回文子串

@@ -16,7 +16,7 @@ public class Method1 {
         int carry = 0;//进位
         //该方法不用考虑p1,p2长度不同的情况，长度短的补0;
         while (p != null || q != null) {
-            //长度段的链表补0
+            //长度短的链表补0
             int x = (p != null) ? p.val : 0;
             int y = (q != null) ? q.val : 0;
             int sum = carry + x + y;

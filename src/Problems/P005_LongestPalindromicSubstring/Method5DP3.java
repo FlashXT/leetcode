@@ -11,7 +11,7 @@ public class Method5DP3 {
 
     public String longestPalindrome(String s) {
         int length = s.length();
-        //memo[i][j] 表示 s[i ~j+1]是否为回文串
+
         boolean[] memo = new boolean[length];
         String res = "";
         for (int i = length-1; i >0 ; i--)
