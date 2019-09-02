@@ -22,7 +22,6 @@ public class Method1 {
                 res = res.substring(0,res.length()-1);
                 ans.add(res);
             }
-
             return ;
         }
         int last = Math.min(3,s.length());

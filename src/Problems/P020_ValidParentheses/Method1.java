@@ -1,4 +1,4 @@
-package Problems.P20_ValidParentheses;
+package Problems.P020_ValidParentheses;
 
 import java.util.Stack;
 

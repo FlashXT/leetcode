@@ -49,45 +49,5 @@ public class Method1 {
         return res;
     }
 
-    public void midTraveral(TreeNode root){
-        Stack<TreeNode> stack = new Stack<>();
-        TreeNode temp = root;
-        while(!stack.isEmpty() || temp != null){
-            if(temp!=null){
-                stack.push(temp);
-                temp = temp.left;
-            }
-            else{
-                temp = stack.pop();
-                System.out.print(temp.val+"\t");
-                temp = temp.right;
-            }
-        }
-        System.out.println();
-    }
-    public void posTraveral(TreeNode root){
 
-        Stack<TreeNode> stack = new Stack<>();
-        TreeNode h= root,c=null;
-        stack.push(root);
-        if(h!=null){
-            while(!stack.isEmpty()){
-                c = stack.peek();
-                if(c.left!=null && c.left!=h && c.right != h)
-                    stack.push(c.left);
-                else if(c.right!=null && c.right!=h)
-                    stack.push(c.right);
-                else
-                {
-
-                    c = stack.pop();
-                    h = c;
-                    System.out.print(c.val+"\t");
-                }
-
-            }
-        }
-        System.out.println();
-
-    }
 }

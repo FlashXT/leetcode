@@ -3,7 +3,10 @@ package Problems.P075_SortColors;
 //荷兰国旗问题
 public class Method1 {
     public void sortColors(int[] nums) {
-        if(nums.length <= 1) return ;
+        if(nums.length <= 1) {
+            System.out.println(nums[0]);
+            return ;
+        }
         int left = -1;
         int right = nums.length;
 

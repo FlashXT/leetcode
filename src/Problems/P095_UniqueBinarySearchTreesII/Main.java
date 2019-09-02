@@ -1,5 +1,6 @@
 package Problems.P095_UniqueBinarySearchTreesII;
 
+import DataStructure.Tree;
 import DataStructure.TreeNode;
 
 import java.util.Iterator;
@@ -18,7 +19,7 @@ public class Main {
         List<TreeNode> res = new Method2().generateTrees(3);
         Iterator<TreeNode> iter = res.iterator();
         while(iter.hasNext()){
-            new Method1().posTraveral(iter.next());
+            new Tree().posTraveral(iter.next());
         }
 
 
